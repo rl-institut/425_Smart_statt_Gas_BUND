@@ -1,0 +1,33 @@
+run:
+  flex_tag: smart_gas
+  prefix: smart
+  name: current
+
+electricity:
+  extendable_carriers:
+    Store: []
+
+sector:
+  tes: false
+  battery_enable: false
+  bev_dsm_availability: 0.01
+  v2g: false
+  heat_pump_enable: false
+
+
+
+
+
+
+
+
+  # h2_store_enable: false
+
+
+
+
+  # heat_pump_sources:
+    # urban central: []
+    # urban decentral: []
+    # rural:
+    # - ground
