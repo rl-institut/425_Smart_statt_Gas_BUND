@@ -30,11 +30,11 @@ doc/_build
 /scripts/create_scenarios.py
 /config/create_scenarios.py
 
-config/config.yaml
+# config/config.yaml
 config/scenarios.yaml
 
 config.yaml
-config/config.yaml
+# config/config.yaml
 
 dconf
 /data/links_p_nom.csv
@@ -71,7 +71,7 @@ d1gam3xoknrgr2.cloudfront.net/
 
 *.geojson
 
-*.ipynb
+*.DS_Store
 
 merger-todos.md
 
