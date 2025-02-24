@@ -62,6 +62,10 @@ warmLoad = ['urban decentral heat', 'rural heat', 'agriculture heat', 'urban cen
 h2FC =['H2 Fuel Cell']
 h2Turbine = ['H2 turbine']
 h2Store=['H2 Store']
+h2Pipeline = ['H2 pipeline']
+
+## Gas
+GasPipeline = ['Gas pipeline']
 
 
 ## filter
