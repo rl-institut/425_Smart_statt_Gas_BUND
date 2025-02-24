@@ -24,6 +24,6 @@ solving:
     agg_offwind: true
     include_existing: false
     file: research/config/smart/agg_p_nom_minmax_NEP.csv
-  
-  constraints: 
+
+  constraints:
     CCL: true

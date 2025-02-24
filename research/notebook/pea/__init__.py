@@ -1,2 +1,2 @@
+from .carriers import *
 from .main import Pea
-from .carriers  import * 

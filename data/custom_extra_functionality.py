@@ -10,9 +10,9 @@ def add_power_limits(n):
     """
     " Restricts the maximum inflow/outflow of electricity from/to a country.
     """
-    ct = 'DE'
-    
-    limit = 35 * 1e3 /10
+    ct = "DE"
+
+    limit = 35 * 1e3 / 10
     # limit = 1e3 * limits_power_max[ct][investment_year] / 10
 
     logger.info(
