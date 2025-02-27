@@ -1,0 +1,14 @@
+run: 
+  prefix: base
+  name: seprateEU
+
+sector:
+  biomass_spatial: true,
+  co2_spatial: true,
+  gas_network: true,
+  methanol:
+    regional_methanol_demand: true,
+  regional_oil_demand: true,
+  regional_coal_demand: true,
+  regional_nuclear_demand: true,
+  regional_oil_production: true,

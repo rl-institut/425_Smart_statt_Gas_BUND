@@ -1,0 +1,10 @@
+run:
+  prefix: scenario
+  name: geothermal
+
+sector:
+  enhanced_geothermal:
+    enable: true
+    var_cf: false
+    
+

@@ -1,0 +1,23 @@
+run:
+  flex_tag: battery_mean
+  prefix: scenario
+  name: battery
+
+costs:
+  override:
+    home battery storage:
+      investment: 129.8051
+      lifetime: 30
+    home battery inverter:
+      FOM: 0.22
+      investment: 122.6452
+      lifetime: 15
+    battery storage:
+      investment: 129.8051
+      lifetime: 30
+    battery inverter:
+      efficiency: 0.96
+      FOM: 0.22
+      investment: 84.6577
+      lifetime: 15
+    

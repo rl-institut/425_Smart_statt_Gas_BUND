@@ -1,0 +1,16 @@
+run:
+  flex_tag: ror_optimist
+  prefix: scenario
+  name: ror
+
+electricity:
+  extendable_carriers:
+    Generator: [solar, solar-hsat, onwind, offwind-ac, offwind-dc, offwind-float, OCGT, CCGT, ror]
+
+costs:
+  override:
+    ror:
+      efficiency: 0.92
+      FOM: 1.8
+      investment: 3071.00394
+      lifetime: 85

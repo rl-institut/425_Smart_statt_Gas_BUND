@@ -1,0 +1,15 @@
+run:
+  prefix: scenario
+  name: PHS
+
+renewable:
+  hydro:
+    PHS_max_hours: 15
+
+costs:
+  override:
+    PHS:
+      efficiency: 0.9
+      FOM: 0.5
+      investment: 1474.08
+      lifetime: 100

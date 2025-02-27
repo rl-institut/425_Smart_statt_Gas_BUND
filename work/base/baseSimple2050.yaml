@@ -1,0 +1,20 @@
+run:
+  name: default-2050
+
+scenario:
+  ll:
+  - vopt
+  clusters:
+  - 39
+  opts:
+  - 6H
+  sector_opts:
+  - 6H
+  planning_horizons:
+  - 2050
+
+countries: ["DE"]
+
+solver:
+  name: gurobi
+  options: gurobi-default

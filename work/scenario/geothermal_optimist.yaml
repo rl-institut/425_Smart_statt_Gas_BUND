@@ -1,0 +1,19 @@
+run:
+  prefix: scenario
+  name: geothermal
+
+sector:
+  enhanced_geothermal:
+    enable: true
+    var_cf: false
+
+costs:
+  override:
+    geothermal:
+      lifetime: 40
+      FOM: 1.5
+      district heat-input: 0.9
+      district heat surcharge: 18
+    organic rankine cycle:
+      lifetime: 40
+      investment: 1108

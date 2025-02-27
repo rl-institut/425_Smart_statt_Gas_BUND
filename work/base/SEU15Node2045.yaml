@@ -1,0 +1,91 @@
+run:
+  prefix: test
+  name: base35Node2045-2H-e5
+
+scenario:
+  ll:
+  - vopt
+  clusters:
+  - 20
+  opts:
+  - 2H
+  sector_opts:
+  - 2H
+  planning_horizons:
+  - 2045
+
+countries: ['AT','BA', 'BE', 'BG', 'CH', 'CZ', 'DE', 'EE', 'ES', 'FI','DK', 'FR', 'GB', 'LU', 'NL', 'NO', 'PL', 'SE', 'ES', 'IT']
+
+renewable:
+  onwind:
+    capacity_per_sqkm: 1.4
+    cutout: europe-2019-sarah3-era5
+    correction_factor: 0.95
+  offwind-ac:
+    capacity_per_sqkm: 6
+    landfall_length: 30
+    cutout: europe-2019-sarah3-era5
+    correction_factor: 0.95
+  offwind-dc:
+    capacity_per_sqkm: 6
+    landfall_length: 30
+    cutout: europe-2019-sarah3-era5
+    correction_factor: 0.95
+  offwind-float: # disabled at the moment
+    landfall_length: 30
+    capacity_per_sqkm: 6
+    cutout: europe-2019-sarah3-era5
+    correction_factor: 0.95
+  solar:
+    cutout: europe-2019-sarah3-era5
+    correction_factor: 0.9 # scaling to Abbildung 36 of https://www.ise.fraunhofer.de/de/veroeffentlichungen/studien/aktuelle-fakten-zur-photovoltaik-in-deutschland.html
+  solar-hsat:
+    cutout: europe-2019-sarah3-era5
+    correction_factor: 0.9 # scaling to Abbildung 36 of https://www.ise.fraunhofer.de/de/veroeffentlichungen/studien/aktuelle-fakten-zur-photovoltaik-in-deutschland.html
+  hydro:
+    cutout: europe-2019-sarah3-era5
+  
+lines:
+  dynamic_line_rating:
+    cutout: europe-2019-sarah3-era5
+
+co2_budget: 
+  2020: 0.720 # average emissions of 2019 to 2021 relative to 1990, excl LULUCF, EEA data, European Environment Agency. (2023a). Annual European Union greenhouse gas inventory 1990–2021 and inventory report 2023 - CRF Table. https://unfccc.int/documents/627830
+  2025: 0.648 # With additional measures (WAM) projection, CO2 excl LULUCF, European Environment Agency. (2023e). Member States’ greenhouse gas (GHG) emission projections 2023. https://www.eea.europa.eu/en/datahub/datahubitem-view/4b8d94a4-aed7-4e67-a54c-0623a50f48e8
+  2030: 0.450 # 55% reduction by 2030 (Ff55)
+  2035: 0.250
+  2040: 0.100 # 90% by 2040
+  2045: 0.000
+  2050: 0.000 # climate-neutral by 2050
+
+snapshots:
+  start: "2019-01-01"
+  end: "2020-01-01"
+  inclusive: 'left'
+
+electricity:
+  estimate_renewable_capacities:
+    year: 2019
+
+atlite:
+  default_cutout: europe-2019-sarah3-era5
+  cutouts:
+    europe-2019-sarah3-era5:
+      module: [sarah, era5] # in priority order
+      x: [-12., 42.]
+      y: [33., 72]
+      dx: 0.3
+      dy: 0.3
+      time: ['2019', '2019']
+solving:
+  solver:
+    name: gurobi
+    options: gurobi-default
+
+  solver_options:
+    gurobi-default:
+      BarConvTol: 1.e-5
+
+costs:
+  year: 2025
+

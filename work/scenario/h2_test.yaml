@@ -1,0 +1,19 @@
+run:
+  flex_tag: h2_test
+  prefix: scenario
+  name: h2
+
+electricity:
+  extendable_carriers:
+    Link: ['H2 pipeline']
+
+sector:
+  hydrogen_turbine: true
+  hydrogen_underground_storage_locations:
+  - nearshore
+  - onshore
+  - offshore
+  H2_retrofit: true
+  H2_retrofit_capacity_per_CH4: 0.6
+  H2_turbine_FOM_Ratio: 1
+  H2_turbine_VOM_Ratio: 1

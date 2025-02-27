@@ -1,0 +1,10 @@
+run:
+  flex_tag: bev_optimist
+  prefix: scenario
+  name: bev
+
+sector:
+  bev_dsm: true
+  v2g: true
+  bev_dsm_availability: 0.7
+    

@@ -1,0 +1,25 @@
+run:
+  prefix: test
+  name: base39DE2045
+
+scenario:
+  ll:
+  - vopt
+  clusters:
+  - 39
+  opts:
+  - 3H-Ept
+  sector_opts:
+  - 3H
+  planning_horizons:
+  - 2045
+
+countries: ["DE"]
+
+# clustering:
+#   focus_weights: 
+#     DE: 0.9
+
+solver:
+  name: gurobi
+  options: gurobi-default

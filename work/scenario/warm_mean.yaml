@@ -1,0 +1,36 @@
+run:
+  flex_tag: warm_mean
+  prefix: scenario
+  name: warm
+
+costs:
+  override:
+    central water tank storage:
+      FOM: 0.26109
+      investment: 2.82366
+      lifetime: 42
+    decentral water tank storage:
+      FOM: 0.9
+      investment: 17.5014
+      lifetime: 22
+    central resistive heater:
+      FOM: 1.575
+      investment: 63.4933
+      lifetime: 22
+    decentral resistive heater:
+      FOM: 1.8
+      investment: 95.23998
+      lifetime: 22
+    direct air capture:
+      FOM: 4.455
+      investment: 6300000
+      lifetime: 22
+    central air-sourced heat pump:
+      FOM: 0.18918
+      investment: 906.0988
+      lifetime: 27
+    decentral air-sourced heat pump:
+      FOM: 2.68065
+      investment: 828.0584
+      lifetime: 19.6
+    

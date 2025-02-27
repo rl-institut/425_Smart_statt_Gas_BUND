@@ -1,0 +1,7 @@
+run:
+  prefix: test
+  name: simpleGeothermal2045
+
+sector:
+  enhanced_geothermal:
+    enable: true

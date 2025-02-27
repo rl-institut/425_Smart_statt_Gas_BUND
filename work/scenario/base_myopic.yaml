@@ -1,0 +1,12 @@
+run:
+  flex_tag: base-myopic
+  prefix: scenario
+  name: base-myopic
+
+foresight: myopic
+
+scenario:
+  planning_horizons:
+  - 2030
+  - 2035
+  - 2045

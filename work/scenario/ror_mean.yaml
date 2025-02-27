@@ -1,0 +1,9 @@
+run:
+  flex_tag: ror_mean
+  prefix: scenario
+  name: ror
+
+electricity:
+  extendable_carriers:
+    Generator: [solar, solar-hsat, onwind, offwind-ac, offwind-dc, offwind-float, OCGT, CCGT, ror]
+  

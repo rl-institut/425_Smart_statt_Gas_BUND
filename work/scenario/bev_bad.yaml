@@ -1,0 +1,9 @@
+run:
+  flex_tag: bev_bad
+  prefix: scenario
+  name: bev
+
+sector:
+  bev_dsm: false
+  v2g: false
+    

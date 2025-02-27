@@ -1,0 +1,4 @@
+run:
+  flex_tag: battery_test
+  prefix: scenario
+  name: battery

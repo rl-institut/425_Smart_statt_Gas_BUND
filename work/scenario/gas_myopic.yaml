@@ -1,0 +1,56 @@
+run:
+  flex_tag: gas-myopic
+  prefix: scenario
+  name: gas-myopic
+
+foresight: myopic
+
+scenario:
+  planning_horizons:
+  - 2030
+  - 2040
+  - 2045
+
+electricity:
+  extendable_carriers:
+    Generator: [ solar, solar-hsat, onwind, offwind-ac, offwind-dc, offwind-float, OCGT, CCGT ]
+    StorageUnit: [] # battery, H2
+    Store: [H2]
+    Link: [] # H2 pipeline
+  conventional_carriers: [nuclear, oil, OCGT, CCGT, coal, lignite, geothermal]
+
+
+
+
+sector:
+  bev_dsm: false
+  v2g: false
+  heat_pump_enable: false
+  tes: false
+  battery_enable: false
+  enable_dsm: false
+
+
+  chp:
+    enable: true
+    fuel:
+      #- solid biomass # For solid biomass, CHP with and without CC are added
+      - gas # For all other fuels the same techno economic data from gas CHP is taken
+
+
+solving:
+  agg_p_nom_limits:
+    agg_offwind: false
+    include_existing: true
+    file: data/agg_p_nom_minmax.csv
+
+    fixed_demand:
+      activate: true  # Set to false to disable fixed demand
+      file: data/demand_values.csv  # Path to your demand values CSV file
+
+  constraints:
+    CCL: true
+    CLL: true
+    EQ: false
+    BAU: false
+    SAFE: false

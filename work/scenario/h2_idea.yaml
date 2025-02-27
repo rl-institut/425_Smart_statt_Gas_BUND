@@ -1,0 +1,64 @@
+run:
+  flex_tag: h2_best
+  prefix: scenario
+  name: h2
+
+electricity:
+  extendable_carriers:
+    Link: ['H2 pipeline']
+  transmission_limit: 'c1'
+
+transmission_projects:
+  enable: false
+
+lines:
+  max_extension: 0
+  length_factor: 3
+  under_construction: zero
+
+links:
+  max_extension: 0
+  length_factor: 3
+  under_construction: zero
+
+sector:
+  hydrogen_turbine: true
+  hydrogen_underground_storage_locations:
+  - nearshore
+  - onshore
+  - offshore
+  H2_retrofit: true
+  H2_retrofit_capacity_per_CH4: 0.6
+  H2_turbine_FOM_Ratio: 0.1
+  H2_turbine_VOM_Ratio: 0.1
+  bev_dsm: false
+  v2g: false
+
+
+
+  
+costs:
+  override:
+    electrolysis:
+      efficiency: 0.72934
+      FOM: 2.916
+      investment: 495
+      lifetime: 25
+    fuel cell:
+      efficiency: 0.6
+      FOM: 3.645
+      investment: 380.959785
+      lifetime: 15
+    hydrogen storage underground:
+      FOM: 0
+      investment: 0.6426
+      lifetime: 100
+    H2 (g) pipeline repurposed:
+      FOM: 1.2
+      investment: 52.434621
+      lifetime: 50
+    H2 (g) pipeline:
+      FOM: 1.2
+      investment: 122.9922
+      lifetime: 50
+    
